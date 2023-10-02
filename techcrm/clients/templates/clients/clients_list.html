@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Clients {% endblock %}
+
+{% block content %}
+<div class="py-6 px-6">
+    <h1 class="py-2 text-xl"> CLIENTS </h1>
+</div>
+<a href="#" class=" flex-justify inline-block py-4 px-6 bg-teal-300 text-white"> Add Client</a>
+<br>
+<br>
+<div class=" mt-6 flex justify-between ">
+    <p class="py-4 px-2 w-full bg-teal-100 font-semibold ">Name</p>
+</div>
+
+{% for client in clients %}
+    <div class="flex justify-between">
+        <p class="py-2 px-2 w-full">
+            <a href="{% url 'clients_detail' client.id %}">{{ client.name }}</a>
+        </p>
+        
+    </div>
+{% endfor %}
+</div>
+
+{% endblock %}

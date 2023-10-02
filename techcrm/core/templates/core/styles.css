@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222; 
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 1rem;
+}
+
+.wrapper {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  color: #222;
+  border-radius: 10px;
+  background: #f6f6f6;
+
+}
+
+#loginForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* height: 500px; */
+}
+
+h1, h3{
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: goldenrod;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  font-size: large;
+  width: 100%;
+
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  height: 3rem;
+  width: 100%;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+button {
+  height: 3.5rem;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(60,99,128,0.3882);
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 1rem 0;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #003980;
+}
+
+
+:root {
+  --main-bg-color: #004c9d;
+  --main-text-color: #00379d;
+  --second-text-color: #bbbec5;
+  --second-bg-color: #c1efde;
+  --third-text-color: red;
+}
+
+.primary-text {
+  color: var(--main-text-color);
+}
+
+.second-text {
+  color: var(--second-text-color);
+}
+
+.primary-bg {
+  background-color: var(--main-bg-color);
+}
+
+.secondary-bg {
+  background-color: var(--second-bg-color);
+}
+
+.rounded-full {
+  border-radius: 100%;
+}
+
+#wrapper {
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    to right,
+    #0448af,
+    #5f8fd8,
+    #78a2e0,
+    #97b8e9,
+    #aac6ee
+  );
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+#menu-toggle {
+  cursor: pointer;
+}
+
+.list-group-item {
+  border: none;
+  padding: 20px 30px;
+}
+
+.list-group-item.active {
+  background-color: transparent;
+  color: var(--main-text-color);
+  font-weight: bold;
+  border: none;
+}
+
+.colo:hover {
+  color: red;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+.sidebar-heading {
+  color: rgba(50,3,3,1);
+  margin: 0%;
+}
+
+.box{
+  width: 500px;
+  height: 10px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.box > i {
+  font-size: 20px;
+  color: #777;
+}
+
+.box > input {
+  flex: 1;
+  height: 20px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.sidebar-heading{
+  color: #8c0303 ;
+}
+
+#bg {
+  background-color: #9FEFD9;
+  height: 100px;
+  width: 384px;
+  text-align: center;
+  font-size: 36px;
+  display: flex;
+  border-radius: 20px;
+}
+
+.bg1 {
+  text-align: center;
+}
+
+.bg2{
+  background-color: #9FEFD9;
+}
+
+::placeholder {
+  color: black;
+}
+
+.sig {
+  background-color: rgba(60,99,128,0.3882);
+  color: black;
+  margin-left: 0px;
+}
+
+#hov:hover {
+  background-color: #0056b3;
+}
+
+#hov:active {
+  background-color: #003980;
+}
+
+#change{
+  text-decoration: none;
+  color: black;
+}
+
+#change1{
+  text-decoration: none;
+  color: #00379d;
+}
+
+#change2{
+  color: #0a9629;
+  text-decoration: none;
+}
+
+#change3 {
+  color: #C51717;
+  text-decoration: none;
+}
+
+thead {
+  background-color: rgba(15, 63, 188, 0.5);
+}
+
+.fam {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+

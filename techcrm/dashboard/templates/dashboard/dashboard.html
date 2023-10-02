@@ -1,0 +1,135 @@
+{% extends 'core/base2.html' %}
+
+
+{% block title %} Dashboard{% endblock %}
+
+{% block content %}
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" name="" placeholder="Type to Search"/>
+                </li>
+            </ul>
+        </div>
+
+        <div class="collapse navbar-collapse red" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a href="login.html" class="list-group-item list-group-item-action bg-transparent fw-bold colo"><i
+                    class="fas fa-power-off me-2"></i>Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid px-4">
+        <div class="row g-3 my-2">
+            <div class="col-md-3">
+                <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div>
+                        <h3 class="fs-5">Today's Enquirys</h3>
+                        <p class="fs-2">10</p>
+                    </div>
+                    <i class="fas fa-project-diagram fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div>
+                        <h3 class="fs-5">Today's Leads</h3>
+                        <p class="fs-2">5</p>
+                    </div>
+                    <i
+                        class="fas fas fa-chart-line fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div>
+                        <h3 class="fs-5">Total Sales</h3>
+                        <p class="fs-2"></p>
+                    </div>
+                    <i class="fas fa-hand-holding-usd fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div>
+                        <h3 class="fs-5">Total Orders</h3>
+                        <p class="fs-2">4</p>
+                    </div>
+                    <i class="fas fa-truck fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div>
+                        <h3 class="fs-5">Hold</h3>
+                        <p class="fs-2">1</p>
+                    </div>
+                    <i class="fa-solid fa-clock-rotate-left fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div>
+                        <h3 class="fs-5">Total Customer</h3>
+                        <p class="fs-2">12</p>
+                    </div>
+                    <i class="fa-solid fa-users fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div>
+                        <h3 class="fs-5">Employees</h3>
+                        <p class="fs-2">14</p>
+                    </div>
+                    <i class="fas fa-solid fa-user fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row my-5">
+        <h3 class="fs-4 mb-3">Recent Orders</h3>
+        <div class="col">
+            <table class="table bg-white rounded shadow-sm table-hover">
+                <thead>
+                    
+                    <tr>
+                        <th scope="col" width="50">#</th>
+                        <th scope="col"> New Leads</th>
+                        <th scope="col">Fabric Name</th>
+                        <th scope="col">Source</th>
+                        <th scope="col">Priority</th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    {% for lead in leads %}
+                    <tr>
+                        <th scope="row">{{ lead.id }}</th>
+                        <td><p class="py-2 px-2 w-full">{{ lead.name }}</p></td>
+                        <td><p class="py-2 px-2 w-full">{{ lead.fabric }}</p></td>
+                        <td><p class="py-2 px-2 w-full">{{ lead.source }}</p></td>
+                        <td><p class="py-2 px-2 w-full">{{ lead.priority }}</p></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+<!-- /#page-content-wrapper -->
+</div>
+{% endblock %}
